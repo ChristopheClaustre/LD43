@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 1192320261
+    locked: 0
+  - name: GOODS
+    uniqueID: 681651583
+    locked: 0
+  - name: NEXT
+    uniqueID: 3427926167
+    locked: 0
+  - name: GRANDPA
+    uniqueID: 2811703779
+    locked: 0
+  - name: BUYER
+    uniqueID: 1065887747
+    locked: 0
+  - name: COUNTER
+    uniqueID: 739705097
+    locked: 0
+  - name: BUBBLES
+    uniqueID: 1679982757
+    locked: 0
