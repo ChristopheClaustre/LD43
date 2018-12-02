@@ -73,27 +73,27 @@ public class SoundManager : MonoBehaviour {
         m_music.Play();
     }
 
-    public void FadeOut(float FadeTime)
+    public IEnumerator FadeOut(float FadeTime)
     {
         float startVolume = m_music.volume;
 
         while (m_music.volume > 0)
         {
             m_music.volume -= startVolume * Time.deltaTime / FadeTime;
-            return;
+            yield return null;
         }
         m_music.Stop();
         m_music.volume = startVolume;
     }
 
-    public void FadeIn(float FadeTime)
+    public IEnumerator FadeIn(float FadeTime)
     {
         m_music.volume = 0;
         m_music.Play();
         while (m_music.volume < 1)
         {
             m_music.volume += Time.deltaTime / FadeTime;
-            return;
+            yield return null;
         }
     }
 
