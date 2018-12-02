@@ -1,5 +1,19 @@
 {
-    "m_testInt": 0,
-    "m_testFloat": 0.0,
-    "m_testString": ""
+    "categoriePrices": [ 100, 200, 300 ],
+
+    /* percent of categoriePrices
+    MERDE
+    */
+
+    "buyerPrice": 0.5,
+    "buyerPriceMaxDerivation": 0.25,
+
+    ///// buyerIntriguedPrice = actual buyerPrice + buyerIntriguedPriceMaxDerivation
+    "buyerIntriguedPriceMaxDerivation": 0.1,
+
+    // buyerHighestPrice = (intrigued ? actual intrigued buyer price : actual buyer price) + buyerHighestPriceMaxDerivation
+    "buyerHighestPriceMaxDerivation": 0.1,
+
+    "grandpaPrice": 0.98,
+    "grandpaPriceMaxDerivation": 0.1
 }
