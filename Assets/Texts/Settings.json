@@ -2,14 +2,12 @@
     "categoriePrices": [ 100, 200, 300 ],
     "elementsPerCategorie": [ 2, 6, 4 ],
 
-    /* percent of categoriePrices
-    MERDE
-    */
+    /* percent of categoriePrices */
 
     "buyerPrice": 0.5,
     "buyerPriceMaxDerivation": 0.25,
 
-    ///// buyerIntriguedPrice = actual buyerPrice + buyerIntriguedPriceMaxDerivation
+    // buyerIntriguedPrice = actual buyerPrice + buyerIntriguedPriceMaxDerivation
     "buyerIntriguedPriceMaxDerivation": 0.1,
 
     // buyerHighestPrice = (intrigued ? actual intrigued buyer price : actual buyer price) + buyerHighestPriceMaxDerivation
