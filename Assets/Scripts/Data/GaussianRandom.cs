@@ -58,7 +58,7 @@ public class GaussianRandom :
 
     /********  PUBLIC           ************************/
 
-    public static double NextStandardGaussianDouble()
+    public static double Value()
     {
         double u, v, S;
 
@@ -74,32 +74,56 @@ public class GaussianRandom :
         return u * fac;
     }
 
-    public static double NextGaussianDouble(double mean, double sigma)
+    public static double NextDouble(double p_mean, double p_sigma)
     {
-        double value = NextStandardGaussianDouble();
-
-        return value * sigma + mean;
+        return Value() * p_sigma + p_mean;
     }
 
-    public static double NextNormalizedGaussianDouble(double min, double max)
+    public static double NextClampedDouble(double p_min, double p_max)
     {
-        double mean = (min + max) / 2;
-        double sigma = (max - mean) / 3;
+        double mean = (p_min + p_max) / 2;
+        double sigma = (p_max - mean) / 3;
 
-        return NextGaussianDouble(mean, sigma);
+        return NextDouble(mean, sigma);
     }
 
-    public static void Test(int  p_nbValues, double p_min, double p_max)
+    public static void TestDouble(int  p_nbValues, double p_min, double p_max)
     {
         double[] values = new double[p_nbValues];
         string text = "";
         for(int i = 0; i < p_nbValues; ++i)
         {
-            values[i] = NextNormalizedGaussianDouble(p_min, p_max);
+            values[i] = NextClampedDouble(p_min, p_max);
             text += values[i] + ", ";
         }
 
         Debug.Log(text.Substring(0, text.Length-2));
+    }
+
+    public static int NextInt(double p_mean, double p_sigma)
+    {
+        return (int) System.Math.Round(Value() * p_sigma + p_mean);
+    }
+
+    public static int NextClampedInt(int p_min, int p_max)
+    {
+        double mean = (p_min + p_max) / 2.0;
+        double sigma = (p_max - mean) / 3.0;
+
+        return NextInt(mean, sigma);
+    }
+
+    public static void TestInt(int p_nbValues, int p_min, int p_max)
+    {
+        double[] values = new double[p_nbValues];
+        string text = "";
+        for (int i = 0; i < p_nbValues; ++i)
+        {
+            values[i] = NextClampedDouble(p_min, p_max);
+            text += values[i] + ", ";
+        }
+
+        Debug.Log(text.Substring(0, text.Length - 2));
     }
 
     /********  PROTECTED        ************************/
