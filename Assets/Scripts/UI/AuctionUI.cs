@@ -59,6 +59,8 @@ public class AuctionUI :
     public Button m_upButton;
     public Button m_downButton;
 
+    public Buyer m_buyer;
+
     #endregion
     #region Methods
     /***************************************************/
@@ -70,7 +72,7 @@ public class AuctionUI :
     // Use this for initialization
     private void Start()
     {
-        Init(Random.Range(45,55), 110, m_good);
+        Init();
     }
 
     // Update is called once per frame
@@ -99,30 +101,30 @@ public class AuctionUI :
 
     public void Validate()
     {
-        Debug.Log("OK");
+        m_buyer.ProposeAPrice(m_proposition);
     }
 
-    public void Init(int p_init, int p_gpPrice, Sprite p_sprite)
+    public void Init()
     {
-        m_gpPrice = p_gpPrice;
-        m_init = p_init;
+        m_gpPrice = m_buyer.GranpaPrice();
+        m_init = m_buyer.ActualBuyerPrice();
 
         m_proposition = m_init;
         m_max = 4 * m_init;
 
-        m_goodImage.sprite = p_sprite;
-
-        InitUI();
+        InitUI(m_good);
     }
 
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
 
-    private void InitUI()
+    private void InitUI(Sprite p_sprite)
     {
         m_gpPriceText.text = m_gpPrice + " $";
+        m_gpPriceText.enabled = m_buyer.IsGranpaPriceKnow();
         m_initText.text = m_init + " $";
+        m_goodImage.sprite = m_good;
 
         UpdateUI();
     }
