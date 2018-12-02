@@ -22,6 +22,7 @@ public class SettingsManager :
     public class Settings
     {
         public int[] categoriePrices;
+        public int[] elementsPerCategorie;
 
         /* percent of categoriePrices */
 

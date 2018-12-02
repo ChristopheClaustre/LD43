@@ -1,5 +1,6 @@
 {
     "categoriePrices": [ 100, 200, 300 ],
+    "elementsPerCategorie": [ 2, 6, 4 ],
 
     /* percent of categoriePrices
     MERDE
