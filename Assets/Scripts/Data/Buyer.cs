@@ -58,7 +58,7 @@ public class Buyer :
     // Use this for initialization
     private void Start()
     {
-        Init(Stock.Inst.m_someStuff[Random.Range(0, Stock.Inst.m_someStuff.Length-1)]);
+        Init(Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()]);
     }
 
     // Update is called once per frame
@@ -79,7 +79,7 @@ public class Buyer :
     public bool ProposeAPrice(int p_proposition)
     {
         if (IsPropositionValid(p_proposition))
-            Debug.Log("YEAH :)");
+            Dora.Inst.SellCurrentItem(p_proposition);
         else
         {
             Debug.Log("NO :/");
