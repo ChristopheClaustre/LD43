@@ -58,6 +58,7 @@ public class Stock :
         }
     }
 
+    [System.Serializable]
     public struct AuctionStuff
     {
         public Stuff m_stuff;
@@ -74,7 +75,10 @@ public class Stock :
     /***  PROPERTY              ************************/
     /***************************************************/
 
-
+    public static Stock Inst
+    {
+        get { return m_instance; }
+    }
 
     #endregion
     #region Constants
@@ -90,6 +94,8 @@ public class Stock :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
+    private static Stock m_instance;
+
     public Stuff[] m_someStuff;
 
     #endregion
@@ -103,6 +109,9 @@ public class Stock :
     // Use this for initialization
     private void Start()
     {
+        Debug.Assert(m_instance == null);
+        m_instance = this;
+
         m_someStuff = new Stuff[SettingsManager.Inst.elementsPerCategorie[0] + SettingsManager.Inst.elementsPerCategorie[1] + SettingsManager.Inst.elementsPerCategorie[2]];
         int i = 0;
 
