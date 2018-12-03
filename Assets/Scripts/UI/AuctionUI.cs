@@ -72,7 +72,7 @@ public class AuctionUI :
     // Use this for initialization
     private void Start()
     {
-        Init();
+
     }
 
     // Update is called once per frame

@@ -142,6 +142,9 @@ public class Discussions :
     public void EndDiscussion()
     {
         m_animator.SetBool("Launch" + m_actualDiscussionName, false);
+
+        GeneralManagement.Inst.EndDiscussion(m_actualDiscussionName);
+
         m_actualDiscussionName = "";
     }
 

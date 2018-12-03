@@ -58,8 +58,6 @@ public class Introduction :
 
     int m_round = 0;
 
-    public Animator m_animator;
-
     #endregion
     #region Methods
     /***************************************************/

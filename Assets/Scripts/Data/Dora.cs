@@ -56,7 +56,6 @@ public class Dora :
     private int m_capital;
     private int m_grandpaLove;
     private int m_currentItem;
-    private bool m_night = true;
 
     #endregion
     #region Methods
@@ -100,6 +99,19 @@ public class Dora :
         Stock.Stuff stuff = Stock.Inst.m_someStuff[m_currentItem];
         m_grandpaLove -= System.Math.Max(stuff.m_grandpaPrice - p_sellingPrice, 0);
         m_capital += p_sellingPrice;
+    }
+
+    public void SelectAnItem()
+    {
+        List<int> availableIndices = new List<int>();
+
+        for (int i = 0; i < Stock.Inst.m_someStuff.Length; i++)
+        {
+            if (!Stock.Inst.m_someStuff[i].m_sold)
+                availableIndices.Add(i);
+        }
+
+        m_currentItem = availableIndices[Random.Range(0, availableIndices.Count)];
     }
 
     public int CurrentIndex()
