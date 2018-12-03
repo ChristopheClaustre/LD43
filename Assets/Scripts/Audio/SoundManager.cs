@@ -66,10 +66,17 @@ public class SoundManager : MonoBehaviour {
 
     /********  PUBLIC           ************************/
 
-    public void PlaySingle(AudioClip clip)
+    public void PlayLoopSingle(AudioClip clip)
     {
         m_music.clip = clip;
         m_music.loop = true;
+        m_music.Play();
+    }
+
+    public void PlaySingle(AudioClip clip)
+    {
+        m_music.clip = clip;
+        m_music.loop = false;
         m_music.Play();
     }
 
