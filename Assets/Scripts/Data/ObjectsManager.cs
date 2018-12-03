@@ -43,10 +43,12 @@ public class ObjectsManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        m_FreeIndexList = new List<int>();
         int i = 0;
         foreach (Sprite sprite in m_sprites)
         {
             m_FreeIndexList.Add(i);
+            i++;
         }
         generateObjectSprite();
     }
