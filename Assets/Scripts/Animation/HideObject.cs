@@ -48,12 +48,26 @@ public class HideObject : MonoBehaviour
 
     void OnMouseEnter()
     {
-        this.transform.localScale = this.transform.localScale * 1.1f;
+        if (Dora.Inst.GetPickingStep())
+        {
+            this.transform.localScale = this.transform.localScale * 1.1f;
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1f,1f,1f);
+        }
     }
 
     void OnMouseExit()
     {
-        this.transform.localScale = this.transform.localScale / 1.1f;
+        if (Dora.Inst.GetPickingStep())
+        {
+            this.transform.localScale = this.transform.localScale / 1.1f;
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 
     /********  OUR MESSAGES     ************************/

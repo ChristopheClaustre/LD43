@@ -8,7 +8,7 @@ using UnityEngine;
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class Picking2D : MonoBehaviour
+public class ObjectsManager : MonoBehaviour
 {
 
     #region Property
@@ -23,6 +23,10 @@ public class Picking2D : MonoBehaviour
     /***************************************************/
     /***  ATTRIBUTES            ************************/
     /***************************************************/
+    public List<GameObject> m_objects;
+    public List<Sprite> m_sprites;
+
+    private List<int> m_FreeIndexList;
 
     #endregion
     #region Methods
@@ -39,37 +43,40 @@ public class Picking2D : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        int i = 0;
+        foreach (Sprite sprite in m_sprites)
+        {
+            m_FreeIndexList.Add(i);
+        }
+        generateObjectSprite();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Dora.Inst.GetPickingStep())
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-                RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-                if (hit.collider != null)
-                {
-                    GameObject hitGO = hit.collider.gameObject;
-                    if (hitGO.tag == "Object")
-                    {
-                        Debug.Log(hitGO.name);
-                        hitGO.GetComponent<HideObject>().Hide();
-                    }
+    }
 
-                }
+
+    /********  OUR MESSAGES     ************************/
+
+    /********  PUBLIC           ************************/
+
+    /********  PROTECTED        ************************/
+    public void generateObjectSprite()
+    {
+        foreach(GameObject stuff in m_objects)
+        {
+            if(m_FreeIndexList.Count > 0)
+            {
+                int randIndex = Random.Range(0, m_FreeIndexList.Count);
+                int spriteIndex = m_FreeIndexList[randIndex];
+                m_FreeIndexList.RemoveAt(randIndex);
+                SpriteRenderer sprite = stuff.GetComponent<SpriteRenderer>();
+                sprite.sprite = m_sprites[spriteIndex];
             }
         }
     }
 
-        /********  OUR MESSAGES     ************************/
-
-        /********  PUBLIC           ************************/
-
-        /********  PROTECTED        ************************/
-
-        /********  PRIVATE          ************************/
-        #endregion
+    /********  PRIVATE          ************************/
+    #endregion
 }

@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4847924005347860}
   - component: {fileID: 114420929194238484}
   - component: {fileID: 114761476333704904}
+  - component: {fileID: 114106951796826240}
+  - component: {fileID: 114647685956981716}
   m_Layer: 0
   m_Name: _Dora
   m_TagString: Untagged
@@ -41,6 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114106951796826240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840174361078546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebda371d7a7ce44dacc27a2ae4714df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objects: []
+  m_sprites: []
 --- !u!114 &114420929194238484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +68,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_settingsFile: {fileID: 4900000, guid: 20e92a07b9794044799c0b2f694ab6a2, type: 3}
+--- !u!114 &114647685956981716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840174361078546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71831ac1c3a15e4ea4769aa7538d2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_music: {fileID: 0}
 --- !u!114 &114761476333704904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,3 +91,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa57668bc6f54044af656b6e41616f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pickingStep: 0
