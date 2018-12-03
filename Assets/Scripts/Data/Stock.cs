@@ -27,6 +27,7 @@ public class Stock :
 
         public bool m_buyerIntrigued;
         public bool m_grandpaPriceKnown;
+        public bool m_sold;
 
         public AuctionStuff StartAuction()
         {
@@ -55,6 +56,7 @@ public class Stock :
 
             m_buyerIntrigued = false;
             m_grandpaPriceKnown = false;
+            m_sold = false;
         }
     }
 
