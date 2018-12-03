@@ -107,6 +107,11 @@ public class Dora :
         return m_currentItem;
     }
 
+    public int GetCapital()
+    {
+        return m_capital;
+    }
+
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
