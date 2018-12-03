@@ -174,6 +174,34 @@ public class GeneralManagement :
         Dora.Inst.SelectAnItem();
         m_buyer.Init(Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()]);
         m_auctionUI.Init();
+        m_animatorGeneral.SetInteger("remainingPropositions", 3);
+
+        m_animatorGeneral.SetBool("stuffSold", false);
+        m_animatorGeneral.SetBool("hasPlayerRefused", false);
+        m_animatorGeneral.SetBool("intriguable", Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()].m_buyerIntrigued);
+    }
+
+    public void ResetHasPlayerChoose()
+    {
+        m_animatorGeneral.SetBool("hasPlayerChoose", false);
+    }
+
+    public void Refuse()
+    {
+        m_animatorGeneral.SetBool("hasPlayerRefused", true);
+    }
+
+    public void Sold()
+    {
+        m_animatorGeneral.SetBool("stuffSold", true);
+        m_animatorGeneral.SetBool("hasPlayerChoose", true);
+    }
+
+    public void NotSold()
+    {
+        m_animatorGeneral.SetInteger("remainingPropositions", m_animatorGeneral.GetInteger("remainingPropositions") - 1);
+        m_animatorGeneral.SetBool("stuffSold", false);
+        m_animatorGeneral.SetBool("hasPlayerChoose", true);
     }
 
     /********  PROTECTED        ************************/

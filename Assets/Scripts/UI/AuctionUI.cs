@@ -104,6 +104,11 @@ public class AuctionUI :
         m_buyer.ProposeAPrice(m_proposition);
     }
 
+    public void Refuse()
+    {
+        m_buyer.Refuse();
+    }
+
     public void Init()
     {
         m_gpPrice = m_buyer.GranpaPrice();

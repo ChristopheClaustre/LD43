@@ -44,7 +44,7 @@ public class Buyer :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
-    int m_round = 3;
+    //int m_round = 3;
     public Stock.AuctionStuff m_currentStuff;
     
     #endregion
@@ -58,7 +58,7 @@ public class Buyer :
     // Use this for initialization
     private void Start()
     {
-        Init(Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()]);
+        
     }
 
     // Update is called once per frame
@@ -79,16 +79,21 @@ public class Buyer :
     public bool ProposeAPrice(int p_proposition)
     {
         if (IsPropositionValid(p_proposition))
+        {
             Dora.Inst.SellCurrentItem(p_proposition);
+            GeneralManagement.Inst.Sold();
+        }
         else
         {
-            Debug.Log("NO :/");
-            m_round--;
-            if (m_round <= 0)
-                Debug.Log("Tayoo");
+            GeneralManagement.Inst.NotSold();
         }
 
         return IsPropositionValid(p_proposition);
+    }
+
+    public void Refuse()
+    {
+        GeneralManagement.Inst.Refuse();
     }
 
     public int ActualBuyerPrice()
