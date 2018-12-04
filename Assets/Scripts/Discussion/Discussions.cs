@@ -23,6 +23,7 @@ public class Discussions :
     {
         eGrandpa,
         eGrandpaPicking,
+        eBuyer,
         eYou
     }
 
@@ -128,6 +129,16 @@ public class Discussions :
             GameObject picked = GeneralManagement.Inst.m_pickObject;
             image_grandpaPicking.sprite = picked ? picked.GetComponent<SpriteRenderer>().sprite : null;
             image_grandpaPicking.enabled = picked != null;
+        }
+        else if (p_discussion.who == Who.eBuyer)
+        {
+            textMesh_grandpaPicking.text = Buyer.Inst.NotIntriguedBuyerPrice() + " $";
+            textMesh_grandpaPicking.enabled = true;
+
+            textMesh_grandpa.enabled = false;
+            
+            image_grandpaPicking.sprite = Stock.Inst.GetStuffSprite(Dora.Inst.CurrentIndex());
+            image_grandpaPicking.enabled = true;
         }
     }
 

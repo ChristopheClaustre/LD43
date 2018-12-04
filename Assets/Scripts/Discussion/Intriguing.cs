@@ -8,7 +8,7 @@ using System.Collections.Generic;
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class Buyer :
+public class Intriguing :
     MonoBehaviour
 {
     #region Sub-classes/enum
@@ -28,13 +28,7 @@ public class Buyer :
     /***  PROPERTY              ************************/
     /***************************************************/
 
-    public static Buyer Inst
-    {
-        get
-        {
-            return m_instance;
-        }
-    }
+
 
     #endregion
     #region Constants
@@ -50,9 +44,14 @@ public class Buyer :
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
-    private static Buyer m_instance;
-    
-    public Stock.AuctionStuff m_currentStuff;
+    Discussions.Discussion[] m_discussion =
+    {
+        new Discussions.Discussion( Discussions.Who.eBuyer, "404" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "You are interested in this object ? Amazing !" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Let me tell you the story behind this tresor..." ),
+    };
+
+    int m_round = 0;
 
     #endregion
     #region Methods
@@ -65,8 +64,7 @@ public class Buyer :
     // Use this for initialization
     private void Start()
     {
-        Debug.Assert(m_instance == null);
-        m_instance = this;
+        
     }
 
     // Update is called once per frame
@@ -79,69 +77,25 @@ public class Buyer :
 
     /********  PUBLIC           ************************/
 
-    public void Init(Stock.Stuff p_auctionStuff)
+    public void NextIntriguing()
     {
-        m_currentStuff = p_auctionStuff.StartAuction();
-    }
-
-    public bool ProposeAPrice(int p_proposition)
-    {
-        if (IsPropositionValid(p_proposition))
-        {
-            Dora.Inst.SellCurrentItem(p_proposition);
-            GeneralManagement.Inst.Sold();
-        }
+        if (m_round >= m_discussion.Length)
+            Discussions.Inst.EndDiscussion();
         else
         {
-            GeneralManagement.Inst.NotSold();
+            Discussions.Inst.ChangeText(m_discussion[m_round]);
+            m_round++;
         }
-
-        return IsPropositionValid(p_proposition);
     }
 
-    public void Refuse()
+    public void BeginIntriguing()
     {
-        GeneralManagement.Inst.Refuse();
-    }
-
-    public int NotIntriguedBuyerPrice()
-    {
-        return m_currentStuff.m_buyerPrice;
-    }
-
-    public int ActualBuyerPrice()
-    {
-        return (IsBuyerIntrigued() ? m_currentStuff.m_buyerIntriguedPrice : m_currentStuff.m_buyerPrice);
-    }
-
-    public int ActualBuyerMaxPrice()
-    {
-        return (IsBuyerIntrigued() ? m_currentStuff.m_buyerIntriguedHighestPrice : m_currentStuff.m_buyerHighestPrice);
-    }
-
-    public int GranpaPrice()
-    {
-        return m_currentStuff.m_stuff.m_grandpaPrice;
-    }
-
-    public bool IsGranpaPriceKnow()
-    {
-        return m_currentStuff.m_stuff.m_grandpaPriceKnown;
-    }
-
-    public bool IsBuyerIntrigued()
-    {
-        return m_currentStuff.m_stuff.m_buyerIntrigued;
+        m_round = 0;
     }
 
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
-
-    private bool IsPropositionValid(int p_proposition)
-    {
-        return p_proposition <= ActualBuyerMaxPrice();
-    }
 
     #endregion
 }

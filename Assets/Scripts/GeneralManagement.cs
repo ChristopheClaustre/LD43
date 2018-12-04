@@ -111,6 +111,11 @@ public class GeneralManagement :
         m_animatorYouBubble.SetBool("Hide", false);
     }
 
+    public void ShowYourBubble()
+    {
+        m_animatorYouBubble.SetBool("Hide", false);
+    }
+
     public void HideDiscussionBubble()
     {
         m_animatorGrandpaBubble.SetBool("Hide", true);
@@ -186,6 +191,11 @@ public class GeneralManagement :
         m_animatorGeneral.SetBool("stuffSold", false);
         m_animatorGeneral.SetBool("hasPlayerRefused", false);
         m_animatorGeneral.SetBool("intriguable", Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()].m_buyerIntrigued);
+    }
+
+    public void ResetIntriguable()
+    {
+        m_animatorGeneral.SetBool("intriguable", false);
     }
 
     public void ResetHasPlayerChoose()
