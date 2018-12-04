@@ -54,6 +54,7 @@ public class AuctionUI :
     public Image m_goodImage;
     public TextMeshProUGUI m_propositionText;
     public TextMeshProUGUI m_gpPriceText;
+    public Animator m_gpPriceAnimation;
     public TextMeshProUGUI m_initText;
     public Button m_upButton;
     public Button m_downButton;
@@ -126,7 +127,8 @@ public class AuctionUI :
     private void InitUI(Sprite p_sprite)
     {
         m_gpPriceText.text = m_gpPrice + " $";
-        m_gpPriceText.enabled = m_buyer.IsGranpaPriceKnow();
+        m_gpPriceAnimation.SetBool("Hide", ! m_buyer.IsGranpaPriceKnow());
+
         m_initText.text = m_init + " $";
         m_goodImage.sprite = p_sprite;
 
