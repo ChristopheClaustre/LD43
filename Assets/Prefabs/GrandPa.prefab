@@ -40,7 +40,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1423025412083144
 GameObject:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053007441987770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.71, y: -5.6, z: 0}
+  m_LocalPosition: {x: 1.86, y: -5.64, z: 0}
   m_LocalScale: {x: 2.2, y: 2.2, z: 1}
   m_Children:
   - {fileID: 4681022198085868}
@@ -154,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1423025412083144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.026, y: 0.026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4318340731070304}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_HitSounds: {fileID: 8300000, guid: 30892b7ba043106458e98754f0996049, type: 3}
   m_TimerMaxCough: 15
   m_TimerMinCough: 3
-  m_EnableCough: 0
+  m_EnableCough: 1
 --- !u!212 &212806956840615270
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -324,8 +324,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1483263517
-  m_SortingLayer: 4
+  m_SortingLayerID: 1065887747
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 154e4474d2cabbe4e91dacd9e048b167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -371,7 +371,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1483263517
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 154e4474d2cabbe4e91dacd9e048b167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
