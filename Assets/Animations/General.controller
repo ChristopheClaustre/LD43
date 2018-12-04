@@ -62,18 +62,6 @@ AnimatorController:
     m_DefaultInt: -1000
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: grandpaLove
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 700
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: remainingQuestions
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 3
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: remainingPropositions
     m_Type: 3
     m_DefaultFloat: 0
