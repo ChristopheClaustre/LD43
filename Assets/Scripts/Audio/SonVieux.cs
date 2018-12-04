@@ -49,7 +49,7 @@ public class SonVieux : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        m_EnableCough = false;
+        ResetTimer();
     }
 
     // Update is called once per frame
@@ -64,9 +64,7 @@ public class SonVieux : MonoBehaviour
             }
             else
             {
-                m_TimeFromLastCough = 0;
-                m_TimeNextCough = Random.Range(m_TimerMinCough, m_TimerMaxCough);
-                Debug.Log(m_TimeNextCough);
+                ResetTimer();
                 PlayRandCough();
             }
         }
@@ -103,6 +101,13 @@ public class SonVieux : MonoBehaviour
         AudioSource audioSource = this.GetComponent<AudioSource>();
         audioSource.clip = audio;
         audioSource.Play();
+    }
+
+    protected void ResetTimer()
+    {
+        m_TimeFromLastCough = 0;
+        m_TimeNextCough = Random.Range(m_TimerMinCough, m_TimerMaxCough);
+        Debug.Log(m_TimeNextCough);
     }
 
     /********  PRIVATE          ************************/
