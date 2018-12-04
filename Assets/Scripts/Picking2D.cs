@@ -55,8 +55,12 @@ public class Picking2D : MonoBehaviour
                     GameObject hitGO = hit.collider.gameObject;
                     if (hitGO.tag == "Object")
                     {
-                        GeneralManagement.Inst.SetPickObject(hitGO);
-                        GeneralManagement.Inst.SetPickIndex(hitGO.transform.GetSiblingIndex());
+                        int index = hitGO.transform.GetSiblingIndex();
+                        if (! Stock.Inst.m_someStuff[index].m_buyerIntrigued || ! Stock.Inst.m_someStuff[index].m_grandpaPriceKnown)
+                        {
+                            GeneralManagement.Inst.SetPickObject(hitGO);
+                            GeneralManagement.Inst.SetPickIndex(index);
+                        }
                     }
                 }
             }

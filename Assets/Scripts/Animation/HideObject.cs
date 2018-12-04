@@ -51,7 +51,10 @@ public class HideObject : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (GeneralManagement.Inst.GetPickingStep())
+        int index = transform.GetSiblingIndex();
+        bool valid = (! Stock.Inst.m_someStuff[index].m_buyerIntrigued || ! Stock.Inst.m_someStuff[index].m_grandpaPriceKnown);
+
+        if (valid && GeneralManagement.Inst.GetPickingStep())
         {
             oldGoodScale = transform.localScale;
             this.transform.localScale = this.transform.localScale * 1.1f;

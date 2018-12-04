@@ -238,11 +238,10 @@ public class GeneralManagement :
     {
         m_pickIndex = p_pickIndex;
 
-        Stock.Stuff stuff = Stock.Inst.m_someStuff[m_pickIndex];
-        if (stuff.m_buyerIntrigued)
-            stuff.m_grandpaPriceKnown = true;
+        if (Stock.Inst.m_someStuff[m_pickIndex].m_buyerIntrigued)
+            Stock.Inst.m_someStuff[m_pickIndex].m_grandpaPriceKnown = true;
         else
-            stuff.m_buyerIntrigued = true;
+            Stock.Inst.m_someStuff[m_pickIndex].m_buyerIntrigued = true;
     }
 
     public void PapyInFront()
