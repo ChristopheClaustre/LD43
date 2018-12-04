@@ -119,13 +119,12 @@ public class GeneralManagement :
 
     public void BeginDiscussion(string p_name)
     {
-        m_animatorGeneral.SetBool(p_name + "IsFinished", false);
         Discussions.Inst.BeginDiscussion(p_name);
     }
 
     public void EndDiscussion(string p_name)
     {
-        m_animatorGeneral.SetBool(p_name+"IsFinished", true);
+        m_animatorGeneral.SetTrigger(p_name+"Finished");
     }
 
     public void CustomerArrival()
