@@ -293,31 +293,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114792122092403302, guid: 33d0469920ca3604892fd3c1c667daa2,
-        type: 2}
-      propertyPath: m_EnableCough
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318340731070304, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318340731070304, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 212806956840615270, guid: 33d0469920ca3604892fd3c1c667daa2,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681022198085868, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.026
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681022198085868, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.026
+    - target: {fileID: 1295472253162642, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d0469920ca3604892fd3c1c667daa2, type: 2}
