@@ -179,6 +179,10 @@ public class GeneralManagement :
     public void SellingAnimation()
     {
         m_animatorSelling.SetBool("vente", true);
+
+        Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()].m_sold = true;
+
+        Stock.Inst.transform.GetChild(Dora.Inst.CurrentIndex()).GetComponent<Animator>().SetBool("Hide", true);
     }
 
     public void InitBuyer()
