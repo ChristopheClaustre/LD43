@@ -74,6 +74,8 @@ public class ObjectsManager : MonoBehaviour
                 int spriteIndex = m_FreeIndexList[randIndex];
                 m_FreeIndexList.RemoveAt(randIndex);
                 SpriteRenderer sprite = stuff.GetComponent<SpriteRenderer>();
+                Destroy(stuff.GetComponent<PolygonCollider2D>());
+                stuff.AddComponent<PolygonCollider2D>();
                 sprite.sprite = m_sprites[spriteIndex];
             }
         }
