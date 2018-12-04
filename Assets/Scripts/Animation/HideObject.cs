@@ -24,6 +24,8 @@ public class HideObject : MonoBehaviour
     /***  ATTRIBUTES            ************************/
     /***************************************************/
 
+    public Vector3 oldGoodScale;
+
     #endregion
     #region Methods
     /***************************************************/
@@ -39,6 +41,7 @@ public class HideObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        oldGoodScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -50,24 +53,26 @@ public class HideObject : MonoBehaviour
     {
         if (GeneralManagement.Inst.GetPickingStep())
         {
+            oldGoodScale = transform.localScale;
             this.transform.localScale = this.transform.localScale * 1.1f;
         }
         else
         {
-            this.transform.localScale = new Vector3(1f,1f,1f);
+            this.transform.localScale = oldGoodScale;
         }
     }
 
     void OnMouseExit()
     {
-        if (GeneralManagement.Inst.GetPickingStep())
+        transform.localScale = oldGoodScale;
+        /*if (GeneralManagement.Inst.GetPickingStep())
         {
             this.transform.localScale = this.transform.localScale / 1.1f;
         }
         else
         {
-            this.transform.localScale = new Vector3(1f, 1f, 1f);
-        }
+            this.transform.localScale = oldGoodScale;
+        }*/
     }
 
     /********  OUR MESSAGES     ************************/
