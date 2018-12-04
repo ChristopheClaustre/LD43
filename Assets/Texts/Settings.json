@@ -1,6 +1,6 @@
 {
     "categoriePrices": [ 100, 200, 300 ],
-    "elementsPerCategorie": [ 2, 6, 4 ],
+    "elementsPerCategorie": [ 2, 5, 4 ],
 
     /* percent of categoriePrices */
 
