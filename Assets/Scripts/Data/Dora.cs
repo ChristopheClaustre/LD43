@@ -56,7 +56,7 @@ public class Dora :
     private int m_capital;
     private int m_grandpaLove;
     private int m_currentItem;
-    private bool m_pickingStep;
+
 
     #endregion
     #region Methods
@@ -83,7 +83,6 @@ public class Dora :
         }
 
         m_currentItem = Random.Range(0, Stock.Inst.m_someStuff.Length-1);
-        m_pickingStep = false;
     }
 
     // Update is called once per frame
@@ -124,16 +123,6 @@ public class Dora :
     public int GetCapital()
     {
         return m_capital;
-    }
-
-    public bool GetPickingStep()
-    {
-        return m_pickingStep;
-    }
-
-    public void SetPickingStep(bool p_PickingStep)
-    {
-        m_pickingStep = p_PickingStep;
     }
 
     /********  PROTECTED        ************************/

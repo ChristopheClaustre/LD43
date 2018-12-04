@@ -48,7 +48,7 @@ public class HideObject : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (Dora.Inst.GetPickingStep())
+        if (GeneralManagement.Inst.GetPickingStep())
         {
             this.transform.localScale = this.transform.localScale * 1.1f;
         }
@@ -60,7 +60,7 @@ public class HideObject : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (Dora.Inst.GetPickingStep())
+        if (GeneralManagement.Inst.GetPickingStep())
         {
             this.transform.localScale = this.transform.localScale / 1.1f;
         }

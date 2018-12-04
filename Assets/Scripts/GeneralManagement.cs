@@ -62,6 +62,9 @@ public class GeneralManagement :
     public Animator m_animatorSelling;
     public Buyer m_buyer;
     public AuctionUI m_auctionUI;
+    private bool m_pickingStep;
+    private int m_pickIndex;
+    private GameObject m_pickObject;
 
     #endregion
     #region Methods
@@ -76,6 +79,7 @@ public class GeneralManagement :
     {
         Debug.Assert(m_instance == null);
         m_instance = this;
+        m_pickingStep = false;
     }
 
     // Update is called once per frame
@@ -203,6 +207,29 @@ public class GeneralManagement :
         m_animatorGeneral.SetBool("stuffSold", false);
         m_animatorGeneral.SetBool("hasPlayerChoose", true);
     }
+
+    public bool GetPickingStep()
+    {
+        return m_pickingStep;
+    }
+
+    public void SetPickingStep(bool p_PickingStep)
+    {
+        m_pickingStep = p_PickingStep;
+        m_animatorGeneral.SetBool("isPicking", m_pickingStep);
+    }
+
+    public void SetPickObject(GameObject p_pickObject)
+    {
+        m_pickObject = p_pickObject;
+        SetPickingStep(false);
+    }
+
+    public void SetPickIndex(int p_pickIndex)
+    {
+        m_pickIndex = p_pickIndex;
+    }
+    
 
     /********  PROTECTED        ************************/
 

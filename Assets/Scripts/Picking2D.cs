@@ -44,7 +44,7 @@ public class Picking2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Dora.Inst.GetPickingStep())
+        if(GeneralManagement.Inst.GetPickingStep())
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -55,21 +55,22 @@ public class Picking2D : MonoBehaviour
                     GameObject hitGO = hit.collider.gameObject;
                     if (hitGO.tag == "Object")
                     {
-                        Debug.Log(hitGO.name);
                         hitGO.GetComponent<HideObject>().Hide();
+                        GeneralManagement.Inst.SetPickObject(hitGO);
+                        GeneralManagement.Inst.SetPickIndex(hitGO.transform.GetSiblingIndex());
                     }
-
                 }
             }
         }
     }
 
-        /********  OUR MESSAGES     ************************/
 
-        /********  PUBLIC           ************************/
+    /********  OUR MESSAGES     ************************/
 
-        /********  PROTECTED        ************************/
+    /********  PUBLIC           ************************/
 
-        /********  PRIVATE          ************************/
-        #endregion
+    /********  PROTECTED        ************************/
+
+    /********  PRIVATE          ************************/
+    #endregion
 }
