@@ -2,13 +2,11 @@
 /***  INCLUDE               ************************/
 /***************************************************/
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class Introduction :
+public class QuestionStepOne :
     MonoBehaviour
 {
     #region Sub-classes/enum
@@ -46,14 +44,10 @@ public class Introduction :
 
     Discussions.Discussion[] m_discussion =
     {
-        new Discussions.Discussion( Discussions.Who.eYou, "Hello Grandpa how are you ?" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Fine Dear... fine..." ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Your father told me that you are here to help me face my debt but..." ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "But please don't dilapidate all my memories for cheap" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "My heart will not endure it well..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Eviction day is in only 5 days grandpa" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Sacrifices must be made to save your shop" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Please... take care of you grandpa... I love you dear" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "It was a good day grandpa don't you think ?" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Yes thank you for helping me" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customer was interested in a specific object..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about ..." ),
     };
 
     int m_round = 0;
@@ -82,9 +76,9 @@ public class Introduction :
 
     /********  PUBLIC           ************************/
 
-    public void NextIntroduction()
+    public void NextQuestionStepOne()
     {
-        if (m_round > m_discussion.Length)
+        if (m_round >= m_discussion.Length)
             Discussions.Inst.EndDiscussion();
         else
         {
@@ -93,7 +87,7 @@ public class Introduction :
         }
     }
 
-    public void BeginIntroduction()
+    public void BeginQuestionStepOne()
     {
         m_round = 0;
     }

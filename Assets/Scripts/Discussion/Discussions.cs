@@ -22,6 +22,7 @@ public class Discussions :
     public enum Who
     {
         eGrandpa,
+        eGrandpaPicking,
         eYou
     }
 
@@ -71,10 +72,14 @@ public class Discussions :
 
     private static Discussions m_instance;
     public TextMeshProUGUI textMesh_grandpa;
+    public UnityEngine.UI.Image image_grandpaPicking;
+    public TextMeshProUGUI textMesh_grandpaPicking;
     public TextMeshProUGUI textMesh_you;
 
     public Animator m_animator;
     public string m_actualDiscussionName;
+
+    public Sprite m_sprite;
 
     #endregion
     #region Methods
@@ -104,15 +109,34 @@ public class Discussions :
     public void ChangeText(Discussion p_discussion)
     {
         if (p_discussion.who == Who.eGrandpa)
+        {
             textMesh_grandpa.text = p_discussion.text;
-        else
+            textMesh_grandpa.enabled = true;
+
+            textMesh_grandpaPicking.enabled = false;
+
+            image_grandpaPicking.sprite = null;
+            image_grandpaPicking.enabled = false;
+        }
+        else if (p_discussion.who == Who.eYou)
             textMesh_you.text = p_discussion.text;
+        else if (p_discussion.who == Who.eGrandpaPicking)
+        {
+            textMesh_grandpaPicking.text = p_discussion.text;
+            textMesh_grandpaPicking.enabled = true;
+
+            textMesh_grandpa.enabled = false;
+
+            image_grandpaPicking.sprite = m_sprite;
+            image_grandpaPicking.enabled = true;
+        }
     }
 
     public void ClearDiscussion()
     {
         ChangeText(new Discussion(Who.eGrandpa, ""));
         ChangeText(new Discussion(Who.eYou, ""));
+        ChangeText(new Discussion(Who.eGrandpaPicking, ""));
     }
 
     public void NextDiscussion()
@@ -137,6 +161,7 @@ public class Discussions :
     {
         m_actualDiscussionName = p_name;
         m_animator.SetBool("Launch" + m_actualDiscussionName, true);
+        gameObject.SendMessage("Begin" + m_actualDiscussionName);
     }
 
     public void EndDiscussion()
