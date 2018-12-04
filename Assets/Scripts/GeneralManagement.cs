@@ -259,6 +259,11 @@ public class GeneralManagement :
 
     }
 
+    public void DecrementDays()
+    {
+        m_animatorGeneral.SetInteger("remainingDays", m_animatorGeneral.GetInteger("remainingDays") - 1);
+    }
+
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
