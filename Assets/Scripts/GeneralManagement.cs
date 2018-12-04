@@ -130,8 +130,8 @@ public class GeneralManagement :
 
     public void CustomerArrival()
     {
-        m_animatorGeneral.SetInteger("remainingCustomers", 6);
-        m_animatorCustomers.SetInteger("remainingCustomers", 5);
+        m_animatorGeneral.SetInteger("remainingCustomers", 5);
+        m_animatorCustomers.SetInteger("remainingCustomers", 4);
     }
 
     public void DecrementCustomers()
