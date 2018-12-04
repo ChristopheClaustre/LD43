@@ -84,7 +84,7 @@ public class Introduction :
 
     public void NextIntroduction()
     {
-        if (m_round > m_discussion.Length)
+        if (m_round >= m_discussion.Length)
             Discussions.Inst.EndDiscussion();
         else
         {
