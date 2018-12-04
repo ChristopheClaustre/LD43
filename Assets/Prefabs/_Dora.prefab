@@ -54,8 +54,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebda371d7a7ce44dacc27a2ae4714df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objects: []
-  m_sprites: []
+  m_objects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_sprites:
+  - {fileID: 21300000, guid: 9880ccc736abcd941a47750de954de15, type: 3}
+  - {fileID: 21300000, guid: 598513d7323b7ec4f9db99f120a0dc15, type: 3}
+  - {fileID: 21300000, guid: 544bdcfe10f291f47a7033c60c481c30, type: 3}
+  - {fileID: 21300000, guid: 4ed73fbf967e30a49b6a597ad6edf6f5, type: 3}
+  - {fileID: 21300000, guid: a6401e2db438cfd45bac7d0d2a0da9da, type: 3}
+  - {fileID: 21300000, guid: 1fbf510552131174ea099c3e5aa4a0eb, type: 3}
+  - {fileID: 21300000, guid: a452979f09ed9404f9759544d0028184, type: 3}
+  - {fileID: 21300000, guid: 1694ae75dba5fd2488ebb5488f33d2f8, type: 3}
+  - {fileID: 21300000, guid: 6ca41d8e2596cd8408f04440ff7b02d9, type: 3}
 --- !u!114 &114420929194238484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,4 +109,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa57668bc6f54044af656b6e41616f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pickingStep: 0
