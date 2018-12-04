@@ -50,8 +50,7 @@ public class AuctionUI :
     private int m_proposition;
     private int m_init;
     private int m_max;
-
-    public Sprite m_good;
+    
     public Image m_goodImage;
     public TextMeshProUGUI m_propositionText;
     public TextMeshProUGUI m_gpPriceText;
@@ -117,7 +116,7 @@ public class AuctionUI :
         m_proposition = m_init;
         m_max = 4 * m_init;
 
-        InitUI(m_good);
+        InitUI(Stock.Inst.GetStuffSprite(Dora.Inst.CurrentIndex()));
     }
 
     /********  PROTECTED        ************************/
@@ -129,7 +128,7 @@ public class AuctionUI :
         m_gpPriceText.text = m_gpPrice + " $";
         m_gpPriceText.enabled = m_buyer.IsGranpaPriceKnow();
         m_initText.text = m_init + " $";
-        m_goodImage.sprite = m_good;
+        m_goodImage.sprite = p_sprite;
 
         UpdateUI();
     }

@@ -140,6 +140,11 @@ public class Stock :
         }
     }
 
+    public Sprite GetStuffSprite(int p_index)
+    {
+        return transform.GetChild(p_index).GetComponent<SpriteRenderer>().sprite;
+    }
+
     // Update is called once per frame
     private void Update()
     {
