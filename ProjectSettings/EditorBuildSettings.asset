@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/FuckingScene.unity
+    guid: 54e7c2a057f0f084b88123d073db1917
+  m_configObjects: {}
