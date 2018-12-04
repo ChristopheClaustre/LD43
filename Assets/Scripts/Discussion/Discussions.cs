@@ -79,8 +79,6 @@ public class Discussions :
     public Animator m_animator;
     public string m_actualDiscussionName;
 
-    public Sprite m_sprite;
-
     #endregion
     #region Methods
     /***************************************************/
@@ -127,16 +125,17 @@ public class Discussions :
 
             textMesh_grandpa.enabled = false;
 
-            image_grandpaPicking.sprite = m_sprite;
-            image_grandpaPicking.enabled = true;
+            GameObject picked = GeneralManagement.Inst.m_pickObject;
+            image_grandpaPicking.sprite = picked ? picked.GetComponent<SpriteRenderer>().sprite : null;
+            image_grandpaPicking.enabled = picked != null;
         }
     }
 
     public void ClearDiscussion()
     {
+        ChangeText(new Discussion(Who.eGrandpaPicking, ""));
         ChangeText(new Discussion(Who.eGrandpa, ""));
         ChangeText(new Discussion(Who.eYou, ""));
-        ChangeText(new Discussion(Who.eGrandpaPicking, ""));
     }
 
     public void NextDiscussion()
