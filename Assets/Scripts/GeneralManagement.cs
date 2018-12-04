@@ -60,11 +60,14 @@ public class GeneralManagement :
     public Animator m_animatorPropalBubble;
     public Animator m_animatorCustomers;
     public Animator m_animatorSelling;
+    public Animator m_animatorPapy;
     public Buyer m_buyer;
     public AuctionUI m_auctionUI;
+
+
     private bool m_pickingStep;
-    private int m_pickIndex;
-    private GameObject m_pickObject;
+    public int m_pickIndex;
+    public GameObject m_pickObject;
 
     #endregion
     #region Methods
@@ -116,6 +119,7 @@ public class GeneralManagement :
 
     public void BeginDiscussion(string p_name)
     {
+        m_animatorGeneral.SetBool(p_name + "IsFinished", false);
         Discussions.Inst.BeginDiscussion(p_name);
     }
 
@@ -219,6 +223,11 @@ public class GeneralManagement :
         m_animatorGeneral.SetBool("isPicking", m_pickingStep);
     }
 
+    public void SetPickingStepTrue()
+    {
+        SetPickingStep(true);
+    }
+
     public void SetPickObject(GameObject p_pickObject)
     {
         m_pickObject = p_pickObject;
@@ -228,8 +237,28 @@ public class GeneralManagement :
     public void SetPickIndex(int p_pickIndex)
     {
         m_pickIndex = p_pickIndex;
+
+        Stock.Stuff stuff = Stock.Inst.m_someStuff[m_pickIndex];
+        if (stuff.m_buyerIntrigued)
+            stuff.m_grandpaPriceKnown = true;
+        else
+            stuff.m_buyerIntrigued = true;
     }
-    
+
+    public void PapyInFront()
+    {
+        m_animatorPapy.SetBool("inFront", true);
+    }
+
+    public void PapyNotInFront()
+    {
+        m_animatorPapy.SetBool("inFront", false);
+    }
+
+    public void Wait()
+    {
+
+    }
 
     /********  PROTECTED        ************************/
 
