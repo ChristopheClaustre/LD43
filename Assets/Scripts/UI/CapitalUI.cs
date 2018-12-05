@@ -60,7 +60,7 @@ public class CapitalUI :
     // Use this for initialization
     private void Start()
     {
-        
+        UpdateUI();
     }
 
     // Update is called once per frame
