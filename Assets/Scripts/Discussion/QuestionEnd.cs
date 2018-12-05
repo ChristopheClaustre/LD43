@@ -47,9 +47,10 @@ public class QuestionEnd :
     Discussions.Discussion[] m_discussion =
     {
         new Discussions.Discussion( Discussions.Who.eGrandpaPicking, "Yes this object is really intriguing..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "<i>GrandPa told me another of his great stories</i>" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "... Okay we will call it day." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "I have to sleep dear, see you tomorrow." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "See you Grandpa" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "See you tomorrow Grandpa" ),
     };
 
     int m_round = 0;

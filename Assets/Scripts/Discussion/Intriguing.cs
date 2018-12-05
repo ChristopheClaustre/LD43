@@ -49,6 +49,8 @@ public class Intriguing :
         new Discussions.Discussion( Discussions.Who.eBuyer, "404" ),
         new Discussions.Discussion( Discussions.Who.eYou, "You are interested in this object ? Amazing !" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Let me tell you the story behind this tresor..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "<i>I told to the customer one of GrandPa stories</i>" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Now you have my attention !" ),
     };
 
     int m_round = 0;

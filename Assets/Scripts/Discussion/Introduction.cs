@@ -53,7 +53,7 @@ public class Introduction :
         new Discussions.Discussion( Discussions.Who.eGrandpa, "My heart will not endure it well..." ),
         new Discussions.Discussion( Discussions.Who.eYou, "Eviction day is in only 5 days grandpa" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Sacrifices must be made to save your shop" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Please... take care of you grandpa... I love you dear" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Please... Take care of you grandpa... I love you dear" ),
     };
 
     int m_round = 0;

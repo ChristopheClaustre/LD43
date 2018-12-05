@@ -47,6 +47,7 @@ public class QuestionEarlyEnd:
     Discussions.Discussion[] m_discussion =
     {
         new Discussions.Discussion( Discussions.Who.eGrandpaPicking, "Oh yeah I have a lots of story with this object..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "<i>GrandPa told me another of his great stories</i>" ),
         new Discussions.Discussion( Discussions.Who.eYou, "... It was so cool how this object help you in your life" ),
         new Discussions.Discussion( Discussions.Who.eYou, "I'll be able to sell it for much more now" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Grandpa there was another intriguing object..." ),

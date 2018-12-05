@@ -47,7 +47,7 @@ public class QuestionStepOne :
         new Discussions.Discussion( Discussions.Who.eYou, "It was a good day grandpa don't you think ?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "Yes thank you for helping me" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customer was interested in a specific object..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about ..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about... <i>I must point one of GrandPa things</i>" ),
     };
 
     int m_round = 0;

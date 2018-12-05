@@ -49,7 +49,7 @@ public class QuestionFirstNight :
         new Discussions.Discussion( Discussions.Who.eYou, "Tell me grandpa before selling all your good memories" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Can you share one with me" ),
         new Discussions.Discussion( Discussions.Who.eYou, "I have spotted a really interesting object" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about ..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about... <i>I must point one of GrandPa things</i>" ),
     };
 
     int m_round = 0;
