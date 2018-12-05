@@ -294,6 +294,20 @@ public class GeneralManagement :
         m_animatorGeneral.SetInteger("remainingDays", m_animatorGeneral.GetInteger("remainingDays") - 1);
     }
 
+    public void UpdatePickableObject()
+    {
+        int nbPickableObject = 0;
+        for (int i = 0; i < Stock.Inst.m_someStuff.Length; ++i)
+        {
+            Stock.Stuff stuff = Stock.Inst.m_someStuff[i];
+
+            if (stuff.m_sold || (stuff.m_buyerIntrigued && stuff.m_grandpaPriceKnown))
+                nbPickableObject++;
+        }
+
+        m_animatorGeneral.SetInteger("numberOfPickableObject", nbPickableObject);
+    }
+
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
