@@ -163,6 +163,12 @@ public class GeneralManagement :
         m_animatorCustomers.SetInteger("remainingCustomers", remaining - 1);
     }
 
+    public void HideAllCustomers()
+    {
+        m_animatorGeneral.SetInteger("remainingCustomers", 0);
+        m_animatorCustomers.SetBool("showCurrent", false);
+    }
+
     public void CustomerIncomming()
     {
         m_animatorCustomers.SetBool("showCurrent", true);
