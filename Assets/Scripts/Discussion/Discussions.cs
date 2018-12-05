@@ -152,31 +152,30 @@ public class Discussions :
     public void NextDiscussion()
     {
         if (m_actualDiscussionName == "") return;
-        m_animator.SetBool("Next"+ m_actualDiscussionName, true);
+
+        m_animator.SetTrigger("NextText");
     }
 
     public void ShowNextText()
     {
         if (m_actualDiscussionName == "") return;
-        gameObject.SendMessage("Next"+m_actualDiscussionName);
-    }
 
-    public void ResetNextDiscussion()
-    {
-        if (m_actualDiscussionName == "") return;
-        m_animator.SetBool("Next"+m_actualDiscussionName, false);
+        gameObject.SendMessage("Next"+m_actualDiscussionName);
     }
 
     public void BeginDiscussion(string p_name)
     {
         m_actualDiscussionName = p_name;
-        m_animator.SetBool("Launch" + m_actualDiscussionName, true);
+
+        m_animator.ResetTrigger("NextText");
+        m_animator.SetBool("DiscussionRunning", true);
+
         gameObject.SendMessage("Begin" + m_actualDiscussionName);
     }
 
     public void EndDiscussion()
     {
-        m_animator.SetBool("Launch" + m_actualDiscussionName, false);
+        m_animator.SetBool("DiscussionRunning", false);
 
         GeneralManagement.Inst.EndDiscussion(m_actualDiscussionName);
 

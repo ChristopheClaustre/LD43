@@ -124,12 +124,13 @@ public class GeneralManagement :
 
     public void BeginDiscussion(string p_name)
     {
+        m_animatorGeneral.ResetTrigger("DiscussionHasFinished");
         Discussions.Inst.BeginDiscussion(p_name);
     }
 
     public void EndDiscussion(string p_name)
     {
-        m_animatorGeneral.SetTrigger(p_name+"Finished");
+        m_animatorGeneral.SetTrigger("DiscussionHasFinished");
     }
 
     public void CustomerArrival()
