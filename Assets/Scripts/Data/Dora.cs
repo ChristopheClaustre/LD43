@@ -54,7 +54,8 @@ public class Dora :
 
     private int m_dayBeforeEviction;
     private int m_capital;
-    private int m_grandpaLove;
+    private int m_grandpaLife;
+    private int m_initialGrandpaLife;
     private int m_currentItem;
 
 
@@ -73,14 +74,16 @@ public class Dora :
         m_instance = this;
 
         m_capital = 0;
-        m_grandpaLove = 0;
+        m_grandpaLife = 0;
         for (int i = 0; i < Stock.Inst.m_someStuff.Length; i++)
         {
             m_capital -= Stock.Inst.m_someStuff[i].m_buyerMean;
-            m_grandpaLove +=
+            m_grandpaLife +=
                 Stock.Inst.m_someStuff[i].m_grandpaPrice -
                     (Stock.Inst.m_someStuff[i].m_buyerMean + Stock.Inst.m_someStuff[i].m_buyerIntriguedMaxDerivation);
         }
+
+        m_initialGrandpaLife = m_grandpaLife;
 
         m_currentItem = Random.Range(0, Stock.Inst.m_someStuff.Length-1);
     }
@@ -98,7 +101,8 @@ public class Dora :
     public void SellCurrentItem(int p_sellingPrice)
     {
         Stock.Stuff stuff = Stock.Inst.m_someStuff[m_currentItem];
-        m_grandpaLove -= System.Math.Max(stuff.m_grandpaPrice - p_sellingPrice, 0);
+        m_grandpaLife -= System.Math.Max(stuff.m_grandpaPrice - p_sellingPrice, 0);
+        GeneralManagement.Inst.ActualisePapyLife(Mathf.RoundToInt(m_grandpaLife * 100.0f / m_initialGrandpaLife));
         m_capital += p_sellingPrice;
     }
 

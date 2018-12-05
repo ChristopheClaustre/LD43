@@ -111,6 +111,12 @@ public class GeneralManagement :
         m_animatorYouBubble.SetBool("Hide", false);
     }
 
+    public void ActualisePapyLife(int p_grandPaLifeInPercent)
+    {
+        m_animatorGeneral.SetInteger("grandpaLifeInPercent", p_grandPaLifeInPercent);
+        m_animatorPapy.SetInteger("grandpaLifeInPercent", p_grandPaLifeInPercent);
+    }
+
     public void ShowYourBubble()
     {
         m_animatorYouBubble.SetBool("Hide", false);
