@@ -183,7 +183,17 @@ public class GeneralManagement :
 
         Stock.Inst.m_someStuff[Dora.Inst.CurrentIndex()].m_sold = true;
 
-        Stock.Inst.transform.GetChild(Dora.Inst.CurrentIndex()).GetComponent<Animator>().SetBool("Hide", true);
+        if (Stock.Inst.transform.GetChild(Dora.Inst.CurrentIndex()).name == "wheelchair")
+        {
+            transform.Find("GrandPa/BgPapy/PapyChair").gameObject.SetActive(true);
+            transform.Find("GrandPa/BgPapy/Papy").gameObject.SetActive(false);
+            transform.Find("GrandPa/ProTipsPapy/PapyChair2").gameObject.SetActive(true);
+            transform.Find("GrandPa/ProTipsPapy/Papy2").gameObject.SetActive(false);
+
+            m_animatorGeneral.SetBool("papyHasWheelchair", false);
+        }
+        else
+            Stock.Inst.transform.GetChild(Dora.Inst.CurrentIndex()).GetComponent<Animator>().SetBool("Hide", true);
     }
 
     public void InitBuyer()
