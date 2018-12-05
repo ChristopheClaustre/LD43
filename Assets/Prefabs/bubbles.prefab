@@ -424,6 +424,8 @@ GameObject:
   - component: {fileID: 114754188335347952}
   - component: {fileID: 114640809749755092}
   - component: {fileID: 114171508793872000}
+  - component: {fileID: 114326560746263850}
+  - component: {fileID: 114035713491192054}
   m_Layer: 5
   m_Name: bubbles
   m_TagString: Untagged
@@ -854,6 +856,17 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114035713491192054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869172964835704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63707ba6452b9d340a61ffcc3532d874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114043812146969816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1107,6 +1120,17 @@ MonoBehaviour:
   textMesh_you: {fileID: 114028826500571750}
   m_animator: {fileID: 95874135506331250}
   m_actualDiscussionName: 
+--- !u!114 &114326560746263850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1869172964835704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d77f01e882c50479faf4ebad11ebf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114373910110013954
 MonoBehaviour:
   m_ObjectHideFlags: 1
