@@ -117,6 +117,11 @@ public class GeneralManagement :
         m_animatorPapy.SetInteger("grandpaLifeInPercent", p_grandPaLifeInPercent);
     }
 
+    public void ActualiseCapital(int p_capital)
+    {
+        m_animatorGeneral.SetInteger("capital", p_capital);
+    }
+
     public void ShowYourBubble()
     {
         m_animatorYouBubble.SetBool("Hide", false);
@@ -200,6 +205,10 @@ public class GeneralManagement :
         }
         else
             Stock.Inst.transform.GetChild(Dora.Inst.CurrentIndex()).GetComponent<Animator>().SetBool("Hide", true);
+
+        m_animatorGeneral.SetInteger("remainingObjects", m_animatorGeneral.GetInteger("remainingObjects") - 1);
+
+        UpdatePickableObject();
     }
 
     public void InitBuyer()
@@ -272,6 +281,8 @@ public class GeneralManagement :
             Stock.Inst.m_someStuff[m_pickIndex].m_grandpaPriceKnown = true;
         else
             Stock.Inst.m_someStuff[m_pickIndex].m_buyerIntrigued = true;
+
+        UpdatePickableObject();
     }
 
     public void PapyInFront()
@@ -301,11 +312,15 @@ public class GeneralManagement :
         {
             Stock.Stuff stuff = Stock.Inst.m_someStuff[i];
 
-            if (stuff.m_sold || (stuff.m_buyerIntrigued && stuff.m_grandpaPriceKnown))
+            if (!stuff.m_sold && (!stuff.m_buyerIntrigued || !stuff.m_grandpaPriceKnown))
                 nbPickableObject++;
         }
 
-        m_animatorGeneral.SetInteger("numberOfPickableObject", nbPickableObject);
+        if (m_animatorGeneral.GetBool("papyHasWheelchair"))
+            // we musn't count the wheelchair in the pickable object
+            m_animatorGeneral.SetInteger("remainingPickableObjects", nbPickableObject - 1);
+        else
+            m_animatorGeneral.SetInteger("remainingPickableObjects", nbPickableObject);
     }
 
     /********  PROTECTED        ************************/

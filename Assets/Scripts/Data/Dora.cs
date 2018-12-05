@@ -104,6 +104,7 @@ public class Dora :
         m_grandpaLife -= System.Math.Max(stuff.m_grandpaPrice - p_sellingPrice, 0);
         GeneralManagement.Inst.ActualisePapyLife(Mathf.RoundToInt(m_grandpaLife * 100.0f / m_initialGrandpaLife));
         m_capital += p_sellingPrice;
+        GeneralManagement.Inst.ActualiseCapital(m_capital);
     }
 
     public void SelectAnItem()
