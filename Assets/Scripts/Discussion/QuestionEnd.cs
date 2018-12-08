@@ -47,8 +47,8 @@ public class QuestionEnd :
     Discussions.Discussion[] m_discussion =
     {
         new Discussions.Discussion( Discussions.Who.eGrandpaPicking, "Yes this object is really intriguing..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "<i>GrandPa told me another of his great stories</i>" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "... Okay we will call it day." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]GrandPa told me another of his great stories[/th]" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "... Okay we will call it a day." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "I have to sleep dear, see you tomorrow." ),
         new Discussions.Discussion( Discussions.Who.eYou, "See you tomorrow Grandpa" ),
     };

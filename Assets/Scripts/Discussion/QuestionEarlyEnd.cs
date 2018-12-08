@@ -47,13 +47,13 @@ public class QuestionEarlyEnd:
     Discussions.Discussion[] m_discussion =
     {
         new Discussions.Discussion( Discussions.Who.eGrandpaPicking, "Oh yeah I have a lots of story with this object..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "<i>GrandPa told me another of his great stories</i>" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "... It was so cool how this object help you in your life" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "I'll be able to sell it for much more now" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]GrandPa told me another of his great stories[/th]" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "... Wow no wonder you didn't want to sell it" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]I'll be able to sell it for much more now[/th]" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Grandpa there was another intriguing object..." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "No dear, I'm sorry but we will call it a day." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "I have to sleep dear, see you tomorrow." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Are you going well grand pa... ?" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Are you going well grandpa... ?" ),
     };
 
     int m_round = 0;

@@ -48,11 +48,11 @@ public class NoWheelchair :
     {
         new Discussions.Discussion( Discussions.Who.eYou, "It was a good day grandpa don't you think ?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "Mmmm... yeah yeah good day..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customer was interested in a specific object..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customers was interested in a specific object..." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "<i>Since I sold his wheelchair to recover debts</i>" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "<i>He doesn't seem to be interested in conversation</i>" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "<i>I really wonder why...</i>" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]Since I sold his wheelchair to pay his debts[/th]" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]He doesn't seem to be interested in conversation[/th]" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[th]I really wonder why...[/th]" ),
     };
 
     int m_round = 0;

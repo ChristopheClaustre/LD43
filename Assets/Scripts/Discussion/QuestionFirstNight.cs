@@ -46,10 +46,10 @@ public class QuestionFirstNight :
 
     Discussions.Discussion[] m_discussion =
     {
-        new Discussions.Discussion( Discussions.Who.eYou, "Tell me grandpa before selling all your good memories" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "grandpa, you must have tons of [tu]memories[/tu] with these antiques" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Can you share one with me" ),
         new Discussions.Discussion( Discussions.Who.eYou, "I have spotted a really interesting object" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about... <i>I must point one of GrandPa things</i>" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Tell me about... [th]I must point one of GrandPa things[th] " ),
     };
 
     int m_round = 0;

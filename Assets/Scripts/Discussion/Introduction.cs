@@ -48,12 +48,12 @@ public class Introduction :
     {
         new Discussions.Discussion( Discussions.Who.eYou, "Hello Grandpa how are you ?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "Fine Dear... fine..." ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Your father told me that you are here to help me face my debt but..." ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "But please don't dilapidate all my memories for cheap" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "My heart will not endure it well..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Eviction day is in only 5 days grandpa" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Sacrifices must be made to save your shop" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Please... Take care of you grandpa... I love you dear" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Your father told me that you are here to help me face my [tu]debt[/tu] but..." ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "But please don't [tu]dilapidate[/tu] all my memories for [tu]cheap[/tu]" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "My [tu]heart[/tu] will not endure it..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Eviction day is in only [tu]5 days[/tu] grandpa" ),
+        new Discussions.Discussion( Discussions.Who.eYou, "[tu]Sacrifices[/tu] must be made to save your shop" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Please... Take care of your grandpa... I love you dear" ),
     };
 
     int m_round = 0;

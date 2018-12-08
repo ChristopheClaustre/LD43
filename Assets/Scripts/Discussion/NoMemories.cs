@@ -46,11 +46,11 @@ public class NoMemories :
     {
         new Discussions.Discussion( Discussions.Who.eYou, "It was a good day grandpa don't you think ?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "Yes thank you for helping me" ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customer was interested in a specific object..." ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Oh you know I think I told you everything" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "Every memories I have with those old stuff at least." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customers was interested in a specific object..." ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Oh you know, I think I told you everything" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Every memories I have with these old things at least." ),
         new Discussions.Discussion( Discussions.Who.eYou, "Maybe... You told me more than I could ever store" ),
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "I'll leave you know, okay ...?" ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "I'll leave you now, okay ...?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "I have to sleep dear, see you tomorrow." ),
         new Discussions.Discussion( Discussions.Who.eYou, "See you tomorrow Grandpa" ),
     };

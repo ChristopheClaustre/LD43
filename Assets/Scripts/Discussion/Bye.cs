@@ -46,7 +46,7 @@ public class Bye :
 
     Discussions.Discussion[] m_discussion =
     {
-        new Discussions.Discussion( Discussions.Who.eGrandpa, "We can't find an arrangement. Bye." ),
+        new Discussions.Discussion( Discussions.Who.eGrandpa, "Too bad, thank you anyway. Bye." ),
         new Discussions.Discussion( Discussions.Who.eYou, "Have a nice day." ),
     };
 

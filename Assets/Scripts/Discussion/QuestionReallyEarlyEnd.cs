@@ -48,7 +48,7 @@ public class QuestionReallyEarlyEnd :
     {
         new Discussions.Discussion( Discussions.Who.eYou, "It was a good day grandpa don't you think ?" ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "..." ),
-        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customer was interested in a specific object..." ),
+        new Discussions.Discussion( Discussions.Who.eYou, "Grandpa one of the customers was interested in a specific object..." ),
         new Discussions.Discussion( Discussions.Who.eGrandpa, "..." ),
         new Discussions.Discussion( Discussions.Who.eYou, "Grandpa ? are you alright ?" ),
         new Discussions.Discussion( Discussions.Who.eYou, "Grandpa ...?" ),
