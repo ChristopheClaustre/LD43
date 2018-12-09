@@ -80,6 +80,11 @@ public class Discussions :
     public Animator m_animator;
     public string m_actualDiscussionName;
 
+    string tutorialBeginBalise = "[tu]";
+    string tutorialEndBalise = "[/tu]";
+    string thoughtBeginBalise = "[th]";
+    string thoughtEndBalise = "[/th]";
+
     #endregion
     #region Methods
     /***************************************************/
@@ -107,6 +112,8 @@ public class Discussions :
 
     public void ChangeText(Discussion p_discussion)
     {
+        p_discussion.text = PimpingText(p_discussion.text);
+
         if (p_discussion.who == Who.eGrandpa)
         {
             textMesh_grandpa.text = p_discussion.text;
@@ -185,6 +192,12 @@ public class Discussions :
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
+
+    private string PimpingText(string text)
+    {
+        text = text.Replace(tutorialBeginBalise, "<color=#9C2914><b>").Replace(tutorialEndBalise, "</b></color>");
+        return text.Replace(thoughtBeginBalise, "<color=#6E4614aa><i>").Replace(thoughtEndBalise, "</i></color>");
+    }
 
     #endregion
 }
