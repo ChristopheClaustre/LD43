@@ -8,7 +8,7 @@ using UnityEngine;
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class HideObject : MonoBehaviour
+public class ObjectGigantificator : MonoBehaviour
 {
 
     #region Property
@@ -68,25 +68,11 @@ public class HideObject : MonoBehaviour
     void OnMouseExit()
     {
         transform.localScale = oldGoodScale;
-        /*if (GeneralManagement.Inst.GetPickingStep())
-        {
-            this.transform.localScale = this.transform.localScale / 1.1f;
-        }
-        else
-        {
-            this.transform.localScale = oldGoodScale;
-        }*/
     }
 
     /********  OUR MESSAGES     ************************/
 
     /********  PUBLIC           ************************/
-
-    public void Hide()
-    {
-        this.GetComponent<PolygonCollider2D>().enabled = false;
-        this.GetComponent<Animator>().SetBool("Hide", true);
-    }
 
     /********  PROTECTED        ************************/
 
