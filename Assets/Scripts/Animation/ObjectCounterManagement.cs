@@ -1,28 +1,51 @@
 ﻿/***************************************************/
 /***  INCLUDE               ************************/
 /***************************************************/
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 /***************************************************/
 /***  THE CLASS             ************************/
 /***************************************************/
-public class Picking2D : MonoBehaviour
+public class ObjectCounterManagement :
+    MonoBehaviour
 {
+    #region Sub-classes/enum
+    /***************************************************/
+    /***  SUB-CLASSES/ENUM      ************************/
+    /***************************************************/
 
+    /********  PUBLIC           ************************/
+
+    /********  PROTECTED        ************************/
+
+    /********  PRIVATE          ************************/
+
+    #endregion
     #region Property
     /***************************************************/
     /***  PROPERTY              ************************/
     /***************************************************/
 
-    /********  PUBLIC           ************************/
+
+
+    #endregion
+    #region Constants
+    /***************************************************/
+    /***  CONSTANTS             ************************/
+    /***************************************************/
+
+
 
     #endregion
     #region Attributes
     /***************************************************/
     /***  ATTRIBUTES            ************************/
     /***************************************************/
+
+    public SpriteRenderer m_firstOne;
+    public SpriteRenderer m_secondOne;
 
     #endregion
     #region Methods
@@ -32,42 +55,17 @@ public class Picking2D : MonoBehaviour
 
     /********  UNITY MESSAGES   ************************/
 
-    void Awake()
-    {
-    }
-
     // Use this for initialization
-    void Start()
+    private void Start()
     {
+        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(GeneralManagement.Inst.GetPickingStep())
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-                RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-                if (hit.collider != null)
-                {
-                    GameObject hitGO = hit.collider.gameObject;
-
-                    if (hitGO.tag == "Object" || hitGO.transform.parent.gameObject.tag == "Object")
-                    {
-                        int index = hitGO.tag == "Object" ? hitGO.transform.GetSiblingIndex() : hitGO.transform.parent.GetSiblingIndex();
-                        if (! Stock.Inst.m_someStuff[index].m_buyerIntrigued || ! Stock.Inst.m_someStuff[index].m_grandpaPriceKnown)
-                        {
-                            GeneralManagement.Inst.SetPickObject(hitGO);
-                            GeneralManagement.Inst.SetPickIndex(index);
-                        }
-                    }
-                }
-            }
-        }
+        m_secondOne.sprite = m_firstOne.sprite;
     }
-
 
     /********  OUR MESSAGES     ************************/
 
@@ -76,5 +74,6 @@ public class Picking2D : MonoBehaviour
     /********  PROTECTED        ************************/
 
     /********  PRIVATE          ************************/
+
     #endregion
 }
