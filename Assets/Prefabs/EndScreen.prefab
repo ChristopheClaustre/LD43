@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4663595176005232}
   - component: {fileID: 212016230208032674}
-  - component: {fileID: 95226000497896934}
   m_Layer: 0
   m_Name: EndScreen
   m_TagString: Untagged
@@ -71,24 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95226000497896934
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1187086248343632}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03fe43d02f868ac4584b2facf1ae0463, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &212016230208032674
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -121,8 +102,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1679982757
-  m_SortingLayer: 7
+  m_SortingLayerID: 1192320261
+  m_SortingLayer: 1
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: fd78f0a7bd9746f4fbed071319b9f58e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679982757
   m_SortingLayer: 7
-  m_SortingOrder: 101
+  m_SortingOrder: 105
   m_Sprite: {fileID: 21300000, guid: cdb56ab6cc76ffb408155533eb3fe022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
