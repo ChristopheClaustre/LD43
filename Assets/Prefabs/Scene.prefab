@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4265494012305766}
-  - component: {fileID: 95017358964486866}
+  - component: {fileID: 95914017863154840}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -250,7 +250,7 @@ Transform:
   m_Father: {fileID: 4265494012305766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95017358964486866
+--- !u!95 &95914017863154840
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1

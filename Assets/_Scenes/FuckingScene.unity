@@ -228,6 +228,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224788286551245408, guid: 92a68e12db4f58f44b15f4f01f02dcd5,
     type: 2}
   m_PrefabInternal: {fileID: 16532148}
+--- !u!95 &99455204 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95914017863154840, guid: 3f9049475bde01b448024912907c37c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 861626826}
 --- !u!1 &135031182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1800396205342598, guid: 053c7756a0449b24589da2b9c3f5504d,
@@ -657,7 +662,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1869172964835704, guid: 89dae6c61f12a0c4f8dde2aa963c633c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95874135506331250, guid: 89dae6c61f12a0c4f8dde2aa963c633c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 89dae6c61f12a0c4f8dde2aa963c633c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &864425145 stripped
@@ -1044,7 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animatorGeneral: {fileID: 1779757763}
-  m_animatorDayNightCycle: {fileID: 2104799761}
+  m_animatorDayNightCycle: {fileID: 99455204}
   m_animatorGrandpaBubble: {fileID: 1345162855}
   m_animatorYouBubble: {fileID: 2120741124}
   m_animatorBuyerBubble: {fileID: 205915199}
@@ -1069,11 +1079,6 @@ Animator:
 --- !u!4 &2104799760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4265494012305766, guid: 3f9049475bde01b448024912907c37c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 861626826}
---- !u!95 &2104799761 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95017358964486866, guid: 3f9049475bde01b448024912907c37c0,
     type: 2}
   m_PrefabInternal: {fileID: 861626826}
 --- !u!95 &2120741124 stripped
